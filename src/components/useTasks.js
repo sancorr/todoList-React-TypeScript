@@ -19,7 +19,7 @@ const useTasks = () => {
   const [editingTaskId, setEditingTaskId] = useState(null);
   const [editedTaskName, setEditedTaskName] = useState("");
 
-  // Guardar tareas en localStorage cuando se actualizan
+
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
     localStorage.setItem("inProgressTasks", JSON.stringify(inProgressTasks));

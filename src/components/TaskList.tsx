@@ -6,7 +6,7 @@ import {
   PencilIcon,
 } from "@heroicons/react/outline";
 type Task = {
-  id: string | number; // Asegúrate de que coincide con el tipo de id que usas
+  id: string | number; 
   name: string;
   completed?: boolean;
   inProgress?: boolean;
