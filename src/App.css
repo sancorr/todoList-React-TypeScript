@@ -1,0 +1,51 @@
+.edit-overlay {
+  position: fixed; /* Esto asegura que esté por encima de las tareas */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fondo translúcido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Asegura que el cuadro de edición esté por encima de las tareas */
+}
+
+.edit-overlay .edit-task-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 500px; /* Puedes ajustar este tamaño */
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+  .edit-overlay {
+    padding: 20px; /* Aumentamos el padding para que no esté tan pegado a los bordes en pantallas pequeñas */
+  }
+
+  .edit-overlay .edit-task-container {
+    width: 90%; /* Usar más espacio disponible */
+    max-width: 400px; /* Reducimos el tamaño máximo del contenedor */
+    min-width: 280px; /* Mínimo tamaño en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .edit-overlay .edit-task-container {
+    padding: 15px; /* Ajustamos un poco el padding para pantallas muy pequeñas */
+    max-width: 350px; /* Hacemos el contenedor aún más pequeño en pantallas muy pequeñas */
+  }
+}
+
+/* Estilo adicional para pantallas pequeñas */
+@media (max-width: 375px) {
+  .edit-overlay .edit-task-container {
+    padding: 12px;
+    width: 100%;
+    max-width: 320px;
+    min-width: 280px;
+  }
+}
